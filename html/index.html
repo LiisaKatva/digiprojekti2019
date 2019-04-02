@@ -1,1 +1,166 @@
 
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Kysely versio 1</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Satu">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="kysely" class="col-sm-6">
+        <form onsubmit="return false">
+            <fieldset>
+                <h3>Kysely naisopiskelijoille</h3>
+                
+            
+                <!-- radionappulat-->
+                <div id="kysymys1">
+                Sukupuolesi?
+               <br>
+                <label>
+                    <input type="radio" name="arvio" value="nainen">Nainen
+                </label><br>
+                    <!-- jatkaa kysymyslomakkeeseen-->
+                    
+                <label>
+                    <input type="radio" name="arvio" value="mies">Mies
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="muu">Muu
+                </label><br>
+                <br>
+                </div>
+                
+             <!-- tästä kiitos, et kuulu kohderyhmään -->
+                
+                
+                <!-- Varsinainen kysymyslomake-->
+                
+                <!-- radionappulat-->
+                <div id="kysymys2">
+                Missä koulutusohjelmassa opiskelet?
+               <br>
+                <label>
+                    <input type="radio" name="arvio" value="paiva">Tietojenkäsittelyn päivätoteutus
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="monimuoto">Tietojenkäsittelyn monimuoto
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="avoinamk">Avoin AMK (tietojenkäsittely)
+                </label><br>
+                <br>
+                </div>
+                
+                <!-- monivalinta-->
+                <div id="kysymys3">
+                Missä profiilissa opiskelet / aiot opiskella? <br>
+                <label>
+                    <input type="checkbox" name="valinta" value="valinta1">Ohjelmistotuotanto
+                </label><br>
+                <label>
+                    <input type="checkbox" name="valinta" value="valinta2">Digitaaliset palvelut
+                </label><br>
+                <label>
+                    <input type="checkbox" name="valinta" value="valinta3">ICT ja liiketoiminta
+                </label><br>
+                    <label>
+                    <input type="checkbox" name="valinta" value="valinta4">ICT Infrastruktuurit
+                </label><br>
+                <br>
+                </div>
+                
+                 <!-- radionappulat-->
+                <div id="kysymys4">
+                Oletko saanut tukea opiskeluun opiskelukavereilta? Esimerkiksi kaveriporukka, jonka kanssa ratkotte opiskeluun liittyviä pulmia. <br>
+                <label>
+                    <input type="radio" name="arvio" value="tukea">Olen saanut tukea
+                </label><br>
+                    <label>
+                    <input type="radio" name="arvio" value="jonkintukea">Olen saanut jonkin verran tukea
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="eitukea">En ole saanut tukea
+                </label><br>
+                <br>
+                <br>
+                </div>
+                
+             <!-- radionappulat-->
+                <div id="kysymys5">
+                Toteutuuko opiskelijoiden välinen tasa-arvo Haaga-Heliassa? <br>
+                <label>
+                    <input type="radio" name="arvio" value="k5kylla">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="k5ei">Ei
+                </label><br>
+                 <label>Jos vastasit ei, niin miksi?<br>
+                    <input type="text" required id="k5kentta">
+                </label><br>
+                <br>
+                <br>
+                </div>
+                
+                <!-- radionappulat-->
+                <div id="kysymys6">
+                Koetko, että sukupuoli vaikuttaa opiskeluun tietojenkäsittelyn koulutusohjelmassa? <br>
+                <label>
+                    <input type="radio" name="arvio" value="k6kylla">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="k6ei">En
+                </label><br>
+                 <label>Jos vastasit kyllä, niin miten?<br>
+                    <input type="text" required id="k6kentta">
+                </label><br>
+                <br>
+                <br>
+                </div>
+                
+                 <!-- radionappulat-->
+                <div id="kysymys7">
+                Työskenteletkö jo IT-alalla?<br>
+                <label>
+                    <input type="radio" name="arvio" value="k7kylla">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="k7ei">En
+                </label><br>
+                 <label>Jos vastasit et, niin uskotko työllistyväsi?<br>
+                    <input type="text" required id="k7kentta">
+                </label><br>
+                <br>
+                <br>
+                </div>
+                
+                
+                <!-- vapaat tekstikentät-->
+                <div id="kysymys8">
+                <label>Millaisena koet asemasi naisena IT-alalla tulevaisuudessa?<br>
+                    <textarea name="tulevaisuus" rows="5" cols="50" id="k8vastaus"></textarea>
+                </label>
+                <br>
+                <br>
+                </div>
+                
+ 
+                <input type="submit" value="Lähetä" onclick="tulostaTiedot()">
+                <input type="reset" value="Tyhjennä">
+            </fieldset>
+        </form>
+
+    </div>
+
+
+<!-- vastaamisen jälkeen koonti kaikkien kyselyyn vastanneiden vastauksista-->
+
+</body>
+
+</html>
