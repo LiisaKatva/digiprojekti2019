@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SPRINT 1 TESTI 2</title>
+
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <h2>testi 2</h2>
+
+    <div id="kysymys"></div>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/grt-responsive-menu.js"></script>
+
+    <script>
+        $.getJSON("https://softarest.herokuapp.com/forms/", function(data){
+        var items = []; //määritelään items -taulukko
+        
+       //haetaan tiedot
+            
+        $.each(data, function(key,d){
+            items.push(d.id+ ". " +d.question + "<br>");
+        });
+           
+        $("#kysymys").append(items.join("")); 
+  
+    })      // getJSON kiinni
+
+    </script>
+
+    <form>
+        
+        <div id="vastaus8">
+            <textarea name="tulevaisuus" rows="5" cols="50" id="k8vastaus"></textarea>
+            <br>
+            <br>
+        </div>
+        
+        <input type="submit" value="Lähetä" onclick="tulostaTiedot()">
+        
+    </form>
+
+</body>
+
+</html>
