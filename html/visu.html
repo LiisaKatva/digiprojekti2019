@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Kysely versio 1</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Satu"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+ 
+  
+</head>
+
+<body>
+ 
+    <!-- Varsinainen kysymyslomake-->
+    
+    <div id="kysely" class="container">
+        <div class="jumbotron">
+        <form onsubmit="return false">
+                            
+                <!-- radionappulat-->
+                <div id="kysymys1">
+                <h4>Missä koulutusohjelmassa opiskelet?</h4>
+       
+                <label>
+                    <input type="radio" name="arvio" value="paiva">Tietojenkäsittelyn päivätoteutus
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="monimuoto">Tietojenkäsittelyn monimuoto
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="avoinamk">Avoin AMK (tietojenkäsittely)
+                </label><br>
+                <br>
+                </div>
+                
+                <!-- monivalinta-->
+                <div id="kysymys2">
+                <h4>Missä profiilissa opiskelet / aiot opiskella?</h4>
+        
+                <label>
+                    <input type="checkbox" name="valinta" value="valinta1">Ohjelmistotuotanto
+                </label><br>
+                <label>
+                    <input type="checkbox" name="valinta" value="valinta2">Digitaaliset palvelut
+                </label><br>
+                <label>
+                    <input type="checkbox" name="valinta" value="valinta3">ICT ja liiketoiminta
+                </label><br>
+                    <label>
+                    <input type="checkbox" name="valinta" value="valinta4">ICT Infrastruktuurit
+                </label><br>
+                <br>
+                </div>
+                
+                 <!-- radionappulat-->
+                <div id="kysymys3">
+                    <h4>Oletko onnistunut verkostoitumaan koulussa? Esimerkiksi onko sinulla kaveriporukka, jonka kanssa ratkotte opiskeluun liittyviä pulmia.</h4> 
+                <label>
+                    <input type="radio" name="arvio" value="olenver">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="eiver">En
+                </label><br>
+                <br>
+                <br>
+                </div>
+            
+                      <!-- radionappulat-->
+                <div id="kysymys4">
+                    <h4>Oletko verkostoitunut koulun ulkopuolella IT-alan ihmisten kanssa?</h4> 
+                <label>
+                    <input type="radio" name="arvio" value="olenver">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="eiver">En
+                </label><br>
+                <br>
+                <br>
+                </div>      
+                
+ 
+                
+                <!-- radionappulat-->
+                <div id="kysymys5">
+                    <h4>Koetko, että sukupuoli vaikuttaa opiskeluun tietojenkäsittelyn koulutusohjelmassa?</h4>
+                <label>
+                    <input type="radio" name="arvio" value="k6kylla">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="k6ei">En
+                </label><br>
+                 <label>Jos vastasit kyllä, niin miten?<br>
+                    <input type="text" required id="k6kentta">
+                </label><br>
+                <br>
+                <br>
+                </div>
+                
+                 <!-- radionappulat-->
+                <div id="kysymys6">
+                    <h4>Työskenteletkö jo IT-alalla?</h4>
+                <label>
+                    <input type="radio" name="arvio" value="k7kylla">Kyllä
+                </label><br>
+                <label>
+                    <input type="radio" name="arvio" value="k7ei">En
+                </label><br>
+                 <label>Jos vastasit et, niin uskotko työllistyväsi?<br>
+                    <input type="text" required id="k7kentta">
+                </label><br>
+                <br>
+                <br>
+                </div>
+                
+                
+                <!-- vapaat tekstikentät-->
+                <div id="kysymys7">
+                    <h4>Millaisena koet tulevaisuutesi naisena IT-alalla?</h4>
+                   <label> <textarea name="tulevaisuus" rows="5" cols="30" id="k8vastaus"></textarea>
+                </label>
+                <br>
+                <br>
+                </div>
+            
+            
+          
+                
+            <!-- Lähetä ja tyhjennä buttonit -->
+            <div class="btn">   
+            <input type="submit" class="button" value="Lähetä"
+                   onclick="tulostaTiedot()">
+                
+            </div> 
+                
+            
+            
+    
+        </form>
+
+    </div>
+    </div>
+
+<!-- vastaamisen jälkeen koonti kaikkien kyselyyn vastanneiden vastauksista-->
+
+    
+   
+</body>
+
+</html>
